@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <title>Rhythm's Portfolio</title>
+    <style>
+        .black-gradient {
+            background: linear-gradient(135deg, #333, #444);
+        }
+
+        .bg-primary {
+            background-color: #1a202c;
+        }
+
+        .bg-tertiary {
+            background-color: #2d3748;
+        }
+
+        .text-secondary {
+            color: #718096;
+        }
+
+        .bg-accent {
+            background-color: #ef4444;
+        }
+
+        .bg-card {
+            background-color: #4a5568;
+        }
+
+        .text-accent {
+            color: #ef4444;
+        }
+
+        .typing {
+            border-right: 3px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 4s steps(30, end) forwards,
+                       blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+
+        img {
+            max-width: 40%; /* Reduced size of images */
+            height: auto;
+        }
+    </style>
+</head>
+
+<body class="text-white bg-gray-900">
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="w-full py-5 fixed top-0 z-20 bg-transparent">
+        <div class="w-full flex justify-between items-center max-w-7xl mx-auto px-5">
+            <a href="#" class="flex items-center gap-2">
+                <img src="logo.png" alt="logo" class="w-9 h-9 object-contain">
+                <p class="text-[18px] font-bold">Rhythm <span class="hidden sm:block">| Portfolio</span></p>
+            </a>
+            <ul class="list-none hidden sm:flex flex-row gap-10">
+                <li><a href="#home" class="text-[18px] font-medium hover:text-accent">Home</a></li>
+                <li><a href="#work" class="text-[18px] font-medium hover:text-accent">Works</a></li>
+                <li><a href="#info" class="text-[18px] font-medium hover:text-accent">Info</a></li>
+                <li><a href="#services" class="text-[18px] font-medium hover:text-accent">Services</a></li>
+                <li><a href="#contact" class="text-[18px] font-medium hover:text-accent">Contact</a></li>
+            </ul>
+            <div class="sm:hidden flex items-center">
+                <button id="menu-button" class="text-2xl"><i class="ri-menu-line"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar for Mobile -->
+    <div id="sidebar" class="hidden fixed top-20 right-0 bg-black-gradient p-6 rounded-xl z-10">
+        <ul class="list-none flex flex-col gap-4">
+            <li><a href="#home" class="text-[16px] font-medium text-secondary hover:text-accent">Home</a></li>
+            <li><a href="#work" class="text-[16px] font-medium text-secondary hover:text-accent">Works</a></li>
+            <li><a href="#info" class="text-[16px] font-medium text-secondary hover:text-accent">Info</a></li>
+            <li><a href="#services" class="text-[16px] font-medium text-secondary hover:text-accent">Services</a></li>
+            <li><a href="#contact" class="text-[16px] font-medium text-secondary hover:text-accent">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="h-screen flex items-center justify-center bg-gray-900">
+        <div class="text-center">
+            <h1 id="line1" class="text-5xl font-bold mb-4">Hi, I'm Rhythm Arya</h1>
+            <h3 id="line2" class="text-2xl mb-4 text-accent">A Machine Learning Developer</h3>
+            <p id="line3" class="text-xl mb-4">I design and code beautifully simple things, and I love what I do.</p>
+            <a href="#contact" class="bg-accent py-2 px-4 rounded-lg">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="work" class="py-20 bg-black">
+        <div class="container mx-auto px-5">
+            <h2 class="text-4xl font-bold text-center mb-10">My Works</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-card p-5 rounded-lg">
+                    <img src="project12.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2">AInvest | Python, Flask, TensorFlow, Yahoo Finance API, Kotak Neo API June 2024 – Present</h3>
+                    <p class="text-secondary">• Developed an AI-driven algorithmic trading system designed to optimize index trading strategies through predictive
+                        analytics, automated trade execution, and comprehensive risk management.
+                        • Implemented predictive models using LSTM and Random Forest for trend forecasting, and automated trade
+                        execution using predefined strategies and the Kotak Neo API.
+                        • Enhanced decision-making processes and reduced the need for manual intervention, significantly improving overall
+                        trading performance.</p>
+                </div>
+                <div class="bg-card p-5 rounded-lg">
+                    <img src="projectx.jpg" alt="Project 2" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2">SimSDC | Python, ROS 2, Gazebo, OpenCV, TensorFlow March 2024 – May 2024</h3>
+                    <p class="text-secondary">• Developed a comprehensive simulation environment for self-driving cars, integrating vehicle modeling, lane
+                        detection, and sign classification.
+                        • Defined the physical structure and sensors using URDF and Xacro, utilized Colcon for building and integration,
+                        and launched the simulation in Gazebo for a realistic virtual environment.
+                        • Implemented lane detection using OpenCV (image thresholding, edge detection, Hough transform, HSL
+                        adjustments) and created a CNN-based traffic sign classification system using TensorFlow and Keras (data
+                        preprocessing, custom CNN architecture, transfer learning, fine-tuning, validation).</p>
+                </div>
+                <div class="bg-card p-5 rounded-lg">
+                    <img src="project69.png" alt="Project 3" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-2xl font-bold mb-2">VoteChain | Python, Hardhat, Ethereum, Vanilla JS, Solidity, Node.js, Docker January 2024 - March 2024</h3>
+                    <p class="text-secondary">• Developed a full-stack decentralized voting application using Node.js and Hardhat, ensuring secure and transparent
+                        voting processes through blockchain.
+                        • Created a Solidity smart contract to manage the voting mechanisms and built a Node.js backend that interfaces
+                        with Ethereum via Web3.js for seamless interactions.
+                        • Designed a responsive frontend with Vanilla JavaScript and implemented Dockerization for consistent deployment
+                        across different environments, enhancing the overall development workflow.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section id="info" class="py-20 bg-black">
+        <div class="container mx-auto px-5">
+            <h2 class="text-4xl font-bold text-center mb-10">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="flex-1">
+                    <img src="imgg.jpg" alt="About Me" class="rounded-lg shadow-lg">
+                </div>
+                <div class="flex-1 md:ml-10 mt-10 md:mt-0">
+                    <p class="text-secondary">Technical Skills
+                        <br>Languages: Python, JavaScript, SQL (Postgres), MATLAB
+                        <br>Frameworks: Flask, React, Node.js, FastAPI
+                        <br>Developer Tools: Git, Docker, Google Cloud Platform, VS Code, PyCharm
+                        <br>Libraries: TensorFlow, Keras, scikit-learn, pandas, NumPy, Matplotlib
+                        <br>Soft Skills: Problem-Solving, Communication, Critical Thinking, Continuous Learning.
+                    </p>
+                    <p class="text-secondary">
+                        <br><br>
+                        Education
+                        <br>DA-IICT Gandhinagar, Gujarat
+                        <br>B.Tech. (Honours) in ICT with minor in Robotics and Autonomous Systems Oct. 2021 – May 2025
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black">
+        <div class="container mx-auto px-5">
+            <h2 class="text-4xl font-bold text-center mb-10">Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-card p-5 rounded-lg text-center">
+                    <h3 class="text-2xl font-bold mb-2">Machine Learning Engineer</h3>
+                    <p class="text-secondary">As a Machine Learning Engineer, I specialize in designing, implementing, and deploying machine learning models to solve complex problems and drive data-driven decision-making. My role involves a blend of software engineering, data analysis, and algorithm development to create scalable and efficient ML solutions. </p>
+                </div>
+                <div class="bg-card p-5 rounded-lg text-center">
+                    <h3 class="text-2xl font-bold mb-2">Problem Solving</h3>
+                    <p class="text-secondary">As an AI/ML Engineer, effective problem-solving is at the core of my role. This involves a systematic approach to identifying, analyzing, and addressing complex challenges using machine learning and artificial intelligence techniques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black">
+        <div class="container mx-auto px-5">
+            <h2 class="text-4xl font-bold text-center mb-10">Contact Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="flex-1 bg-card p-5 rounded-lg">
+                    <form id="contact-form" class="flex flex-col gap-4">
+                        <label>
+                            <span class="text-white font-medium">Your Name</span>
+                            <input type="text" name="name" placeholder="What's your good name?" class="bg-gray-700 py-2 px-4 rounded-lg text-white w-full">
+                        </label>
+                        <label>
+                            <span class="text-white font-medium">Your Email</span>
+                            <input type="email" name="email" placeholder="What's your email?" class="bg-gray-700 py-2 px-4 rounded-lg text-white w-full">
+                        </label>
+                        <label>
+                            <span class="text-white font-medium">Your Message</span>
+                            <textarea name="message" rows="4" placeholder="What you want to say?" class="bg-gray-700 py-2 px-4 rounded-lg text-white w-full"></textarea>
+                        </label>
+                        <button type="submit" class="bg-accent py-2 px-4 rounded-lg w-fit self-end">Send</button>
+                    </form>
+                </div>
+                <div class="flex-1 md:ml-10 mt-10 md:mt-0">
+                    <img src="AI.png" alt="AI Canvas" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('hidden');
+        });
+
+        function typeLine(element, text, callback) {
+            let i = 0;
+            const interval = setInterval(() => {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(interval);
+                    if (callback) callback();
+                }
+            }, 100);
+        }
+
+        window.onload = function () {
+            const line1 = document.getElementById('line1');
+            const line2 = document.getElementById('line2');
+            const line3 = document.getElementById('line3');
+
+            line1.innerHTML = '';
+            line2.innerHTML = '';
+            line3.innerHTML = '';
+
+            typeLine(line1, "Hi, I'm Rhythm Arya", () => {
+                setTimeout(() => {
+                    typeLine(line2, "A Machine Learning Developer", () => {
+                        setTimeout(() => {
+                            typeLine(line3, "I design and code beautifully simple things, and I love what I do.");
+                        }, 500);
+                    });
+                }, 500);
+            });
+        }
+    </script>
+</body>
+
+</html>
