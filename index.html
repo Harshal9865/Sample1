@@ -29,7 +29,7 @@
         }
 
         .bg-card {
-            background-color: #4a5568;
+            background-color: #000000;
         }
 
         .text-accent {
@@ -56,8 +56,25 @@
         }
 
         img {
-            max-width: 40%; /* Reduced size of images */
+            max-width: 65%;
             height: auto;
+        }
+
+        .slide-in {
+            animation: slideIn 1s forwards;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -99,7 +116,7 @@
     <section id="home" class="h-screen flex items-center justify-center bg-gray-900">
         <div class="text-center">
             <h1 id="line1" class="text-5xl font-bold mb-4">Hi, I'm Rhythm Arya</h1>
-            <h3 id="line2" class="text-2xl mb-4 text-accent">A Machine Learning Developer</h3>
+            <h3 id="line2" class="text-2xl mb-4 text-accent"></h3>
             <p id="line3" class="text-xl mb-4">I design and code beautifully simple things, and I love what I do.</p>
             <a href="#contact" class="bg-accent py-2 px-4 rounded-lg">Contact Me</a>
         </div>
@@ -109,9 +126,9 @@
     <section id="work" class="py-20 bg-black">
         <div class="container mx-auto px-5">
             <h2 class="text-4xl font-bold text-center mb-10">My Works</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="grid grid-cols-10 sm:grid-cols-2 lg:grid-cols-3 gap-100">
                 <div class="bg-card p-5 rounded-lg">
-                    <img src="project12.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <img src="project12.jpg" alt="Project 1" class="w-full h-30 object-cover rounded-lg mb-4">
                     <h3 class="text-2xl font-bold mb-2">AInvest | Python, Flask, TensorFlow, Yahoo Finance API, Kotak Neo API June 2024 – Present</h3>
                     <p class="text-secondary">• Developed an AI-driven algorithmic trading system designed to optimize index trading strategies through predictive
                         analytics, automated trade execution, and comprehensive risk management.
@@ -121,7 +138,7 @@
                         trading performance.</p>
                 </div>
                 <div class="bg-card p-5 rounded-lg">
-                    <img src="projectx.jpg" alt="Project 2" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <img src="projectx.jpg" alt="Project 2" class="w-full h-30 object-cover rounded-lg mb-4">
                     <h3 class="text-2xl font-bold mb-2">SimSDC | Python, ROS 2, Gazebo, OpenCV, TensorFlow March 2024 – May 2024</h3>
                     <p class="text-secondary">• Developed a comprehensive simulation environment for self-driving cars, integrating vehicle modeling, lane
                         detection, and sign classification.
@@ -132,7 +149,7 @@
                         preprocessing, custom CNN architecture, transfer learning, fine-tuning, validation).</p>
                 </div>
                 <div class="bg-card p-5 rounded-lg">
-                    <img src="project69.png" alt="Project 3" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <img src="project69.png" alt="Project 3" class="w-full h-20 object-cover rounded-lg mb-4">
                     <h3 class="text-2xl font-bold mb-2">VoteChain | Python, Hardhat, Ethereum, Vanilla JS, Solidity, Node.js, Docker January 2024 - March 2024</h3>
                     <p class="text-secondary">• Developed a full-stack decentralized voting application using Node.js and Hardhat, ensuring secure and transparent
                         voting processes through blockchain.
@@ -155,36 +172,38 @@
                     <img src="imgg.jpg" alt="About Me" class="rounded-lg shadow-lg">
                 </div>
                 <div class="flex-1 md:ml-10 mt-10 md:mt-0">
-                    <p class="text-secondary">Technical Skills
-                        <br>Languages: Python, JavaScript, SQL (Postgres), MATLAB
-                        <br>Frameworks: Flask, React, Node.js, FastAPI
-                        <br>Developer Tools: Git, Docker, Google Cloud Platform, VS Code, PyCharm
-                        <br>Libraries: TensorFlow, Keras, scikit-learn, pandas, NumPy, Matplotlib
-                        <br>Soft Skills: Problem-Solving, Communication, Critical Thinking, Continuous Learning.
-                    </p>
-                    <p class="text-secondary">
-                        <br><br>
-                        Education
-                        <br>DA-IICT Gandhinagar, Gujarat
-                        <br>B.Tech. (Honours) in ICT with minor in Robotics and Autonomous Systems Oct. 2021 – May 2025
-                    </p>
+                    <h3 class="text-2xl font-bold mb-2">Rhythm Arya</h3>
+                    <p class="text-secondary mb-4">I am a passionate Machine Learning Developer with experience in building AI-driven solutions. I love to explore new technologies and apply them in my projects to create innovative and efficient systems.</p>
+                    <ul class="list-disc list-inside text-secondary">
+                        <li>Bachelor's in Computer Science</li>
+                        <li>Experience with Python, TensorFlow, PyTorch</li>
+                        <li>Strong background in data analysis and modeling</li>
+                        <li>Enthusiastic about algorithmic trading and autonomous systems</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-black">
+    <section id="services" class="py-20 bg-black-gradient">
         <div class="container mx-auto px-5">
             <h2 class="text-4xl font-bold text-center mb-10">Services</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="bg-card p-5 rounded-lg text-center">
-                    <h3 class="text-2xl font-bold mb-2">Machine Learning Engineer</h3>
-                    <p class="text-secondary">As a Machine Learning Engineer, I specialize in designing, implementing, and deploying machine learning models to solve complex problems and drive data-driven decision-making. My role involves a blend of software engineering, data analysis, and algorithm development to create scalable and efficient ML solutions. </p>
+                <div class="bg-tertiary p-10 rounded-lg text-center shadow-lg">
+                    <i class="ri-computer-line text-5xl text-accent mb-5"></i>
+                    <h3 class="text-2xl font-bold mb-2">Web Development</h3>
+                    <p class="text-secondary">Creating responsive and modern websites using the latest web technologies.</p>
                 </div>
-                <div class="bg-card p-5 rounded-lg text-center">
-                    <h3 class="text-2xl font-bold mb-2">Problem Solving</h3>
-                    <p class="text-secondary">As an AI/ML Engineer, effective problem-solving is at the core of my role. This involves a systematic approach to identifying, analyzing, and addressing complex challenges using machine learning and artificial intelligence techniques.</p>
+                <div class="bg-tertiary p-10 rounded-lg text-center shadow-lg">
+                    <i class="ri-brain-line text-5xl text-accent mb-5"></i>
+                    <h3 class="text-2xl font-bold mb-2">Machine Learning</h3>
+                    <p class="text-secondary">Developing and implementing machine learning models for various applications.</p>
+                </div>
+                <div class="bg-tertiary p-10 rounded-lg text-center shadow-lg">
+                    <i class="ri-search-line text-5xl text-accent mb-5"></i>
+                    <h3 class="text-2xl font-bold mb-2">Data Analysis</h3>
+                    <p class="text-secondary">Providing data analysis services to extract insights and make data-driven decisions.</p>
                 </div>
             </div>
         </div>
@@ -195,68 +214,122 @@
         <div class="container mx-auto px-5">
             <h2 class="text-4xl font-bold text-center mb-10">Contact Me</h2>
             <div class="flex flex-col md:flex-row items-center">
-                <div class="flex-1 bg-card p-5 rounded-lg">
-                    <form id="contact-form" class="flex flex-col gap-4">
-                        <label>
-                            <span class="text-white font-medium">Your Name</span>
-                            <input type="text" name="name" placeholder="What's your good name?" class="bg-gray-700 py-2 px-4 rounded-lg text-white w-full">
-                        </label>
-                        <label>
-                            <span class="text-white font-medium">Your Email</span>
-                            <input type="email" name="email" placeholder="What's your email?" class="bg-gray-700 py-2 px-4 rounded-lg text-white w-full">
-                        </label>
-                        <label>
-                            <span class="text-white font-medium">Your Message</span>
-                            <textarea name="message" rows="4" placeholder="What you want to say?" class="bg-gray-700 py-2 px-4 rounded-lg text-white w-full"></textarea>
-                        </label>
-                        <button type="submit" class="bg-accent py-2 px-4 rounded-lg w-fit self-end">Send</button>
-                    </form>
+                <div class="flex-1">
+                    <img src="AI.png" alt="Contact Me" class="rounded-lg shadow-lg">
                 </div>
                 <div class="flex-1 md:ml-10 mt-10 md:mt-0">
-                    <img src="AI.png" alt="AI Canvas" class="rounded-lg shadow-lg">
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-secondary">Name</label>
+                            <input type="text" id="name" class="mt-1 block w-full bg-gray-800 text-white border-gray-700 rounded-md shadow-sm focus:ring-accent focus:border-accent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-secondary">Email</label>
+                            <input type="email" id="email" class="mt-1 block w-full bg-gray-800 text-white border-gray-700 rounded-md shadow-sm focus:ring-accent focus:border-accent">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-secondary">Message</label>
+                            <textarea id="message" rows="4" class="mt-1 block w-full bg-gray-800 text-white border-gray-700 rounded-md shadow-sm focus:ring-accent focus:border-accent"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="bg-accent py-2 px-4 rounded-lg">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="py-10 bg-black-gradient text-center">
+        <p class="text-secondary">© 2024 Rhythm Arya. All Rights Reserved.</p>
+    </footer>
+
     <script>
-        document.getElementById('menu-button').addEventListener('click', function () {
-            var sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('hidden');
+        document.getElementById("menu-button").addEventListener("click", function () {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("hidden");
         });
 
-        function typeLine(element, text, callback) {
-            let i = 0;
-            const interval = setInterval(() => {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                } else {
-                    clearInterval(interval);
-                    if (callback) callback();
-                }
-            }, 100);
-        }
+        const sections = document.querySelectorAll('section');
+        const navLi = document.querySelectorAll('nav ul li a');
 
-        window.onload = function () {
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            })
+
+            navLi.forEach(a => {
+                a.classList.remove('text-accent');
+                if (a.getAttribute('href') == `#${current}`) {
+                    a.classList.add('text-accent');
+                }
+            })
+        });
+
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.slide-in');
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                if (position < window.innerHeight) {
+                    element.classList.add('slide-in-visible');
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            function typeEffect(element, text, delay) {
+                let i = 0;
+                function type() {
+                    if (i < text.length) {
+                        element.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(type, delay);
+                    }
+                }
+                type();
+            }
+
+            function deleteEffect(element, delay) {
+                let text = element.innerHTML;
+                let i = text.length;
+                function del() {
+                    if (i > 0) {
+                        element.innerHTML = text.substring(0, i - 1);
+                        i--;
+                        setTimeout(del, delay);
+                    }
+                }
+                del();
+            }
+
             const line1 = document.getElementById('line1');
             const line2 = document.getElementById('line2');
             const line3 = document.getElementById('line3');
+            const texts = [
+                "A Machine Learning Engineer.",
+                "A Data Analyst .",
+                "A Data Engineer."
+              
+            ];
 
-            line1.innerHTML = '';
-            line2.innerHTML = '';
-            line3.innerHTML = '';
+            let currentTextIndex = 0;
 
-            typeLine(line1, "Hi, I'm Rhythm Arya", () => {
+            function loopText() {
+                typeEffect(line2, texts[currentTextIndex], 100);
                 setTimeout(() => {
-                    typeLine(line2, "A Machine Learning Developer", () => {
-                        setTimeout(() => {
-                            typeLine(line3, "I design and code beautifully simple things, and I love what I do.");
-                        }, 500);
-                    });
-                }, 500);
-            });
-        }
+                    deleteEffect(line2, 50);
+                    currentTextIndex = (currentTextIndex + 1) % texts.length;
+                    setTimeout(loopText, 1000);
+                }, 3000);
+            }
+
+            setTimeout(loopText, 1000);
+        });
     </script>
 </body>
 
